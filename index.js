@@ -9,6 +9,7 @@ db.connect();
 app.use(express.json({ extended: false }));
 
 app.use("/posts", require("./controller/posts"));
+app.use("/users", require("./controller/users"));
 
 const port = 3000 || process.env.PORT;
 

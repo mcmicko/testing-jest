@@ -1,18 +1,16 @@
 const express = require("express");
 const request = require("supertest");
 const app = express();
-const createPost = require("../posts");
+const posts = require("../posts");
 const db = require("../../db");
 
 app.use(express.json({ extended: false }));
 
-app.use("/posts", createPost);
+app.use("/posts", posts);
 
 beforeAll(async () => await db.connect());
-
 // afterEach(async () => await db.clearDatabase());
-
-// afterAll(async () => await db.closeDatabase());
+afterAll(async () => await db.closeDatabase());
 
 it("Should save POST to database", async () => {
   const res = await request(app)
