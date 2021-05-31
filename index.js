@@ -11,7 +11,7 @@ app.use(express.json({ extended: false }));
 app.use("/posts", require("./controller/posts"));
 app.use("/users", require("./controller/users"));
 
-const port = 3000 || process.env.PORT;
+const port = 5000 || process.env.PORT;
 
 app.listen(port, () => {
   console.log(`server radi na portu ${port}`);

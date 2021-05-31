@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-size: 22px;
+  background-size: 200% 100% !important;
+  -webkit-animation: move 10s ease infinite;
+  animation: move 10s ease infinite;
+  transform: translate3d(0, 0, 0);
+  background: linear-gradient(45deg, #49d49d 10%, #a2c7e5 90%);
+  height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
