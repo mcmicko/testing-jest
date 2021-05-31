@@ -6,7 +6,7 @@ const db = require("../../db");
 
 app.use(express.json({ extended: false }));
 
-app.use("/", users);
+app.use("/users", users);
 
 beforeAll(async () => await db.connect());
 afterAll(async () => await db.closeDatabase());
@@ -14,7 +14,7 @@ afterAll(async () => await db.closeDatabase());
 describe("Registration test : /register", () => {
   it("Without body", async () => {
     const res = await request(app)
-      .post("/register")
+      .post("/users/register")
       .set("Content-Type", "application/json")
       .set("Accept", /json/)
       .send();
@@ -40,7 +40,7 @@ describe("Registration test : /register", () => {
   });
   it("Correct registration", async () => {
     const res = await request(app)
-      .post("/register")
+      .post("/users/register")
       .set("Content-Type", "application/json")
       .set("Accept", /json/)
       .send({
@@ -54,7 +54,7 @@ describe("Registration test : /register", () => {
 
   it("with duplicate EMAIL", async () => {
     const res = await request(app)
-      .post("/register")
+      .post("/users/register")
       .set("Accept", /json/)
       .send({
         name: "mcmzrc",
