@@ -2,7 +2,7 @@
 
 .user {
   width: 90%;
-  max-width: 340px;
+  max-width: 640px;
   margin: 10vh auto;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .user__title {
-  font-size: 32px;
+  font-size: 30px;
   margin-bottom: -10px;
   font-weight: 500;
   color: white;
@@ -43,6 +43,7 @@
   width: 100%;
   padding: 20px;
   font-family: "Roboto";
+  font-size: 22px;
   -webkit-appearance: none;
   border: 0;
   outline: 0;
@@ -54,6 +55,7 @@
 
 .btn {
   display: block;
+  font-size: 18px;
   width: 100%;
   padding: 20px;
   font-family: "Roboto";
@@ -61,11 +63,11 @@
   outline: 0;
   border: 0;
   color: white;
-  background: #aba194;
+  background: #0d8baa;
   transition: 0.3s;
 }
 .btn:hover {
-  background: #a09486;
+  background: #2699b6;
 }
 
 @-webkit-keyframes NO {
